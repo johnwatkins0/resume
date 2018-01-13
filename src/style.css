@@ -1,0 +1,82 @@
+@import "suitcss-base";
+
+body {
+  padding-top: 1.5rem;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+body > header,
+body > main {
+  width: 100%;
+  max-width: 768px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin: 0 auto;
+}
+
+header {
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+main > section {
+  padding: 2.25rem 0;
+}
+
+@supports (pointer-events: none) {
+  main > section:nth-of-type(odd) {
+    position: relative;
+  }
+
+  main > section:nth-of-type(odd)::before {
+    position: absolute;
+    top: 0;
+    right: -1000%;
+    bottom: 0;
+    left: -1000%;
+    z-index: -1;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+}
+
+section > section {
+  padding-bottom: 1rem;
+}
+
+ul {
+  margin: 0.5rem 0;
+  column-count: 2;
+  column-gap: 3rem;
+}
+
+ul.styled {
+  padding-left: 1.5rem;
+  list-style: disc;
+  column-count: 1;
+}
+
+li {
+  margin-bottom: 0.333rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.75em;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
